@@ -47,7 +47,7 @@ Refer to the instructions in the [Guess the Number homework](https://github.com/
 * **(1)** Repository has several logical commits with descriptive messages
 * **(2)** Code uses correct indentation/style and descriptive variable names
 
-## Bonuses
+### Bonuses
 
 * **(1)** Add methods to your madness! We haven't fully covered defining your own methods yet, and technically none are required for this assignment. However, you might have noticed some places in your code that are doing the same thing multiple times, but with slightly different data. Introduce a method or two to resolve this duplication.
 
