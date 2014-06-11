@@ -1,14 +1,24 @@
 
-# red: Park Street = Park, Kendall/MIT = Kendall, South Station = Sstation
-# green: Government Center = Gcenter, Park Street = Park
-# orange: North Station = Nstation, Park Street = Park, State Street = State, Downtown Crossing = Downtown, Tufts Medical Center = Tufts
+# red = ['Alewife', 'Davis', 'Porter', 'Harvard', 'Central', 'Kendall', 'Park', 'Sstation']
+# green = ['Haymarket', 'Gcenter', 'Park', 'Boylston', 'Arlington', 'Copley']
+# orange = ['Nstation', 'Haymarket', 'Park', 'State', 'Downtown', 'Chinatown', 'Tufts']
 
-# This is a hash containing three arrays representing each line
 mbta = {
   red: ['Alewife', 'Davis', 'Porter', 'Harvard', 'Central', 'Kendall', 'Park', 'Sstation'],
   orange: ['Haymarket', 'Gcenter', 'Park', 'Boylston', 'Arlington', 'Copley'],
   green: ['Nstation', 'Haymarket', 'Park', 'State', 'Downtown', 'Chinatown', 'Tufts']
 }
+
+display_list = nil
+case
+# Below: Doesn't work (kindof works)
+when display_list != 'y' || display_list != 'n'
+  puts "Display list of acceptable station names? [y/n]"
+  display_list = gets.chomp.downcase
+  if display_list == 'y'
+    puts mbta
+  end
+end
 
 park = 'Park'
 
@@ -46,13 +56,8 @@ if origin_line == destination_line
 end
 
 if origin_line != destination_line
-# below: sum of stops on first line
   first_line_stops = (mbta[origin_line].index(origin_stop) - mbta[origin_line].index(park)).abs
-# below: sum of stops on second line
   second_line_stops = (mbta[destination_line].index(park) - mbta[destination_line].index(destination_stop)).abs
-##ABOVE: park = 2 - 1
-
-# below: sum of stops on first line + stops on second line
   total_stops = first_line_stops + second_line_stops
   puts "Total number of stops: #{total_stops}"
 end
