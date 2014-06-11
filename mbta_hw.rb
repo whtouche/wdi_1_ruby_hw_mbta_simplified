@@ -12,22 +12,25 @@ mbta = {red: red_line, orange: orange_line, green: green_line}
 
 park = 'Park Street'
 
-origin_line =
+puts "What line are you starting on?"
+origin_line = gets.chomp.downcase.to_sym
+while !mbta.key?(origin_line)
+  puts "Could not find that line. Please try again:"
+  origin_line = gets.chomp.downcase.to_sym
+end
 
-origin_stop =
+origin_stop
 
-destination_line =
+destination_line
 
-destination_stop =
+destination_stop
 
-=begin
+
 
 if origin_line == destination_line
   total_stops = (mbta[origin_line].index(origin_stop) - mbta[destination_line].index(destination_stop)).abs
   puts "Total number of stops: #{first_line_stops}"
 end
-
-# move this above
 
 
 if origin_line != destination_line
@@ -47,5 +50,3 @@ end
 # subtract indexes for number of stops
 
 # .find_index('STRING') # Will find the index
-
-=end
