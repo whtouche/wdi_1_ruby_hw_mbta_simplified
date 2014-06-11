@@ -1,8 +1,4 @@
 
-# red = ['Alewife', 'Davis', 'Porter', 'Harvard', 'Central', 'Kendall', 'Park', 'Sstation']
-# green = ['Haymarket', 'Gcenter', 'Park', 'Boylston', 'Arlington', 'Copley']
-# orange = ['Nstation', 'Haymarket', 'Park', 'State', 'Downtown', 'Chinatown', 'Tufts']
-
 mbta = {
   red: ['Alewife', 'Davis', 'Porter', 'Harvard', 'Central', 'Kendall', 'Park', 'Sstation'],
   orange: ['Haymarket', 'Gcenter', 'Park', 'Boylston', 'Arlington', 'Copley'],
