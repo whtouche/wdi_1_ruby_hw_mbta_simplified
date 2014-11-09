@@ -6,6 +6,7 @@ mbta = {
 }
 
 display_list = nil
+
 case
 # Below: Doesn't work (kindof works)
 when display_list != 'y' || display_list != 'n'
@@ -15,6 +16,8 @@ when display_list != 'y' || display_list != 'n'
     puts mbta
   end
 end
+
+puts
 
 park = 'Park'
 
